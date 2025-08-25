@@ -24,7 +24,6 @@ jobs:
     - name: Vale Check
       uses: errata-ai/vale-action@v2.1.1
       with:
-        debug: true
         fail_on_error: true
         styles: |
           https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip

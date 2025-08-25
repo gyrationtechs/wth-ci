@@ -5,8 +5,6 @@ name: Vale-Linting
 # Event to trigger when the action is run
 on:
   # Tiggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -24,6 +22,7 @@ jobs:
     - name: Vale Check
       uses: errata-ai/vale-action@v2.1.1
       with:
+        reporter: 'github-pr-check'
         fail_on_error: true
         styles: |
           https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip

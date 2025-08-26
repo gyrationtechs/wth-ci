@@ -1,0 +1,11 @@
+extends: substitution
+message: Use '%s' instead of '%s'
+level: warning
+ignorecase: false
+
+swap:
+  writetechhub: WriteTech Hub
+  vale: Vale
+  web-site: website
+  e-mail: email
+  wordpress: WordPress

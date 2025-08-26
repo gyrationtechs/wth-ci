@@ -22,8 +22,9 @@ jobs:
 
       - name: Run Vale Check
         uses: errata-ai/vale-action@v2.1.1
-        # with:
-          # fail_on_error: false
+        with:
+          fail_on_error: false
+          reporter: 'github-pr-review'
 
 
 

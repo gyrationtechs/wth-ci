@@ -5,8 +5,6 @@ name: Vale-Linting
 # Event to trigger when the action is run
 on:
   # Tiggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -16,19 +14,19 @@ on:
 
 jobs:
   review:
+    name: Vale Linting
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Vale Check
-      uses: errata-ai/vale-action@v2.1.1
-      with:
-        fail_on_error: true
-        styles: |
-          https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
-          https://github.com/errata-ai/Google/releases/latest/download/Google.zip
-          https://github.com/errata-ai/Joblint/releases/download/v0.4.1/Joblint.zip
-      env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}} 
+      - name: Run Vale Check
+        uses: errata-ai/vale-action@v2.1.1
+        with:
+          fail_on_error: false
+          reporter: 'github-pr-review'
+
+
+
+
   

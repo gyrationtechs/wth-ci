@@ -1,0 +1,13 @@
+extends: existence
+message: Don't use '%s'
+link: https://exampple.com/styleguide
+ignorecase: true
+
+level: error
+
+tokens:
+  - abortion
+  - as well as
+  - and/or
+  - soft-ware 
+  - word press

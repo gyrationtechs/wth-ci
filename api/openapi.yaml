@@ -24,7 +24,7 @@ tags:
 
 paths:
   /tasks:
-    getting:
+    get:
       summary: Get all tasks
       description: Retrieve a paginated list of tasks
       operationId: getTasks

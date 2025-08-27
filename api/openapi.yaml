@@ -23,8 +23,8 @@ tags:
     description: Operations related to projects
 
 paths:
-  /Tasks:
-    getting:
+  /tasks:
+    get:
       summary: Get all tasks
       description: Retrieve a paginated list of tasks
       operationId: getTasks

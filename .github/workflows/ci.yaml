@@ -14,3 +14,7 @@ jobs:
 
     - name: Check for Broken Links
       uses: tcort/github-action-markdown-link-check@v1
+
+    - name: Print Repo name
+      run: |
+        echo ${{ github.repository }}
